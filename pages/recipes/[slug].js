@@ -2,6 +2,7 @@ import { createClient } from "contentful"
 import Image from "next/image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Skeleton from "../../components/Skeleton";
+import { redirect } from "next/dist/server/api-utils";
 
 
 const client = createClient({
@@ -15,6 +16,15 @@ export const getStaticPaths = async () => {
     const res = await client.getEntries({
         content_type: 'recipe'
     })
+
+    if (!items.length) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false
+            }
+        }
+    }
 
     const paths = res.items.map(item => {
         return {
