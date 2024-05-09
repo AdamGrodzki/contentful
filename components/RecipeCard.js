@@ -11,6 +11,9 @@ export default function RecipeCard({ recipe }) {
           width={thumbnail.fields.file.details.image.width}
           height={thumbnail.fields.file.details.image.height}
           alt={thumbnail.fields.title}
+          style={{
+            borderRadius: '10px'
+          }}
         />
       </div>
       <div className="content">
@@ -24,11 +27,8 @@ export default function RecipeCard({ recipe }) {
       </div>
 
       <style jsx>{`
-                 .card {
-                    transform: rotateZ(-1deg);
-                  }
                   .content {
-                    background: #fff;
+                    background: #ece0d1;
                     box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
                     margin: 0;
                     position: relative;
@@ -53,7 +53,7 @@ export default function RecipeCard({ recipe }) {
                   }
                   .actions a {
                     color: #fff;
-                    background: #f01b29;
+                    background: #38220f;
                     padding: 16px 24px;
                     text-decoration: none;
             `}</style>

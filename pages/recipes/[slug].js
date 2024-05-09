@@ -92,8 +92,8 @@ export default function RecipeDetails({ recipe }) {
           position: relative;
           top: -60px;
           left: -10px;
-          transform: rotateZ(-1deg);
           box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+          border-radius: 10px;
         }
         .info p {
           margin: 0;
