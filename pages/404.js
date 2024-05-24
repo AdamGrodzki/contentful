@@ -20,7 +20,7 @@ export default function NotFound() {
 
             <style jsx>{`
                 .not-found {
-                background: #fff;
+                background: #000;
                 padding: 30px;
                 box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
                   }

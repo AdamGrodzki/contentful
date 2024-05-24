@@ -1,19 +1,19 @@
 export default function Skeleton() {
-    return (
-        <div className="skeleton">
-            <div className="s-banner"></div>
-            <div className="s-header"></div>
-            <div className="s-content"></div>
-            <div className="s-content"></div>
-            <div className="s-content"></div>
+  return (
+    <div className="skeleton">
+      <div className="s-banner"></div>
+      <div className="s-header"></div>
+      <div className="s-content"></div>
+      <div className="s-content"></div>
+      <div className="s-content"></div>
 
-            <style jsx>{`
+      <style jsx>{`
         .skeleton {
           max-width: 1200px;
           margin: 20px auto;
         }
         .skeleton > div {
-          background: #dbcc1a;
+          background: #271300;
           border-radius: 4px;
           margin: 20px 0;
         }
@@ -29,6 +29,6 @@ export default function Skeleton() {
           max-width: 1000px;
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 }

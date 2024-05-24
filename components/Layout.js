@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ArrowNavigation from './ArrowNavigation'
 
 export default function Layout({ children }) {
     return (
@@ -19,8 +20,9 @@ export default function Layout({ children }) {
                 {children}
             </div>
 
+            <ArrowNavigation />
             <footer>
-                <p>Copyright 2024 Just Add Marmite :)</p>
+                <p>Copyright 2024 Just Add Espresso ☕</p>
             </footer>
         </div>
     )

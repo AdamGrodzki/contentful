@@ -12,6 +12,8 @@ const BackButton = () => {
             <button className='prevButton' onClick={handleBack}>Back</button>
             <style jsx>{`
         .prevButton {
+            font-family: inherit;
+            font-size: 25px;
             padding: 10px 20px;
             border-radius: 10px;
             color: #000;

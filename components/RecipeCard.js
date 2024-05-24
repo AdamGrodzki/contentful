@@ -34,7 +34,6 @@ export default function RecipeCard({ recipe }) {
                     margin: 0;
                     position: relative;
                     top: -40px;
-                    left: -10px;
                   }
                   .info {
                     padding: 16px;
@@ -45,7 +44,7 @@ export default function RecipeCard({ recipe }) {
                   }
                   .info p {
                     margin: 0;
-                    color: #777;
+                    color: #666;
                   }
                   .actions {
                     margin-top: 20px;
