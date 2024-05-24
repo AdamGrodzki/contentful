@@ -4,10 +4,8 @@ import RecipeCard from "../components/RecipeCard";
 export async function getStaticProps() {
 
   const client = createClient({
-    space: "p7rgtb3cb5nz",
-    accessToken: "M11heMpA8FfwRHfyuVX00QDncJo5Xd6ItRXTgo0VwSs",
-    // space: process.env.CONTENTFUL_SPACE_ID,
-    // accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   })
 
   const res = await client.getEntries({ content_type: "recipe" })
@@ -15,7 +13,7 @@ export async function getStaticProps() {
   return {
     props: { recipes: res.items },
     revalidate: 1,
-  }
+  };
 }
 
 export default function Recipes({ recipes }) {
@@ -37,3 +35,4 @@ export default function Recipes({ recipes }) {
     </div>
   )
 }
+

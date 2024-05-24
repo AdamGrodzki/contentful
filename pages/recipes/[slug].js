@@ -2,14 +2,11 @@ import { createClient } from "contentful"
 import Image from "next/image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Skeleton from "../../components/Skeleton";
-import { redirect } from "next/dist/server/api-utils";
-
+import Button from "../../components/Button"
 
 const client = createClient({
-    space: "p7rgtb3cb5nz",
-    accessToken: "M11heMpA8FfwRHfyuVX00QDncJo5Xd6ItRXTgo0VwSs",
-    // space: process.env.CONTENTFUL_SPACE_ID,
-    // accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 })
 
 export const getStaticPaths = async () => {
@@ -59,8 +56,11 @@ export default function RecipeDetails({ recipe }) {
 
     return (
         <div>
+            <Button />
             <div className="banner">
                 <Image
+                    fetchPriority="high"
+                    priority
                     src={'https:' + featureImage.fields.file.url}
                     width={featureImage.fields.file.details.image.width}
                     height={featureImage.fields.file.details.image.height}
